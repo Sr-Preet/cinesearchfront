@@ -47,7 +47,7 @@ class AuthService {
         return;
       }
 
-      const response = await axios.get('/api/users/me', {
+      const response = await axios.get('https://cinesearchback.onrender.com/api/users/me', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -63,7 +63,7 @@ class AuthService {
   }
 
   async registerUser(userData) {
-    const response = await axios.post('/api/users', {
+    const response = await axios.post('https://cinesearchback.onrender.com/api/users', {
       data: userData,
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ class AuthService {
   }
 
   async login(userData) {
-    const response = await axios.post('/api/users/login', {
+    const response = await axios.post('https://cinesearchback.onrender.com/api/users/login', {
       data: userData,
       headers: {
         'Content-Type': 'application/json',
