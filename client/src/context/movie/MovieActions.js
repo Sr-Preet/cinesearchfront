@@ -39,7 +39,7 @@ export const saveMovie = async (movie) => {
   }
 
   try {
-    const data = await axios.put('/api/users', movie, {
+    const data = await axios.put('https://cinesearchback.onrender.com/api/users', movie, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ export const deleteMovie = async (movieId) => {
 
   try {
     const data = await axios.put(
-      `/api/users/${movieId}`,
+      `https://cinesearchback.onrender.com/api/users/${movieId}`,
       { movieId },
       {
         headers: {
